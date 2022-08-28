@@ -1,0 +1,166 @@
+@font-face {
+  font-family: "Roboto-regular";
+  src: url("./assets/Roboto-Regular.ttf");
+}
+
+.Header {
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(217, 212, 212);
+}
+
+.left-section {
+  /* width: 150px; */
+  align-items: center;
+  display: flex;
+}
+.hamburger-menu {
+  height: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+.youtube-logo {
+  height: 20px;
+}
+
+.center-section {
+  flex: 1;
+  margin-left: 70px;
+  margin-right: 35px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+}
+.search-bar {
+  /* To make flexible a widget size, don't put it a contant value, generic value with flex to 1 or more */
+  flex: 1;
+  height: 36px;
+  font-size: 16px;
+  /* border-width: 1px;
+  border-style: solid;
+  border-color: rgb(192, 192, 192); */
+  border: 1px solid rgb(192, 192, 192);
+  border-radius: 2px;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+  /* avoid shrink or resizeble */
+  width: 0;
+}
+.search-bar::placeholder {
+  font-family: "Roboto-Regular", "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.search-button {
+  height: 40px;
+  width: 66px;
+  border-color: rgb(192, 192, 192);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(192, 192, 192);
+  margin-left: -1px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.search-button .tooltip,
+.voice-search-button .tooltip {
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip {
+  opacity: 1;
+}
+
+.voice-search-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(245, 245, 245);
+  cursor: pointer;
+}
+
+.search-button,
+.voice-search-button {
+  position: relative;
+}
+
+.search-icon {
+  height: 25px;
+}
+
+.search-voice {
+  height: 24px;
+}
+
+.right-section {
+  display: flex;
+  width: 180px;
+  margin-right: 20px;
+  align-items: center;
+  justify-content: space-between;
+  /* to prevent shrink( fact that widget in flex come to collapse each other */
+  flex-shrink: 0;
+}
+
+.upload-icon {
+  height: 24px;
+}
+
+.youtube-apps-icon {
+  height: 24px;
+}
+
+.notification-icon-container {
+  position: relative;
+}
+
+.notifications-count {
+  position: absolute;
+  top: -2px;
+  right: -5px;
+  background-color: rgb(184, 9, 9);
+  color: white;
+  font-family: "Roboto-Bold", "Courier New", Courier, monospace;
+  font-size: 11px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  border-radius: 10px;
+}
+
+.notifications-icon {
+  height: 24px;
+}
+
+.current-user-picture {
+  height: 32px;
+  border-radius: 16px;
+}
